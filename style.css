@@ -1,0 +1,482 @@
+@import url("https://fonts.cdnfonts.com/css/magz");
+@import url("https://fonts.cdnfonts.com/css/fonzie");
+@import url("https://fonts.cdnfonts.com/css/lmao");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("images/background.png");
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: 20vh;
+  width: 100vw;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+  width: 100vw;
+  flex-direction: row;
+}
+
+footer {
+  height: 5vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  background-color: transparent;
+  border-radius: 3vmin;
+  padding: 1vmin 2vmin;
+  border: none;
+  color: white;
+  font-family: "Fonzie", sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+
+#game {
+  display: none;
+  animation: slideIn 2s forwards;
+}
+
+#start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+#start-title {
+  height: clamp(19rem, 7.571rem + 30.476vw, 35rem);
+  width: clamp(19rem, 7.571rem + 30.476vw, 35rem);
+  min-height: 19rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: column;
+  background-image: url("images/title-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: zoomIn 1s forwards;
+}
+
+#select-player {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: clamp(2rem, -1.571rem + 9.524vw, 7rem);
+  animation: zoomOut 1s forwards;
+}
+
+#start-game-button {
+  background-color: #EE2A7B;
+}
+
+#select-player-text {
+  color: #FFD501;
+}
+
+#players__container {
+  color: #EE2A7B;
+  padding-top: 2vmin;
+}
+
+.players {
+  font-family: "LMAO", sans-serif;
+  color: white;
+  cursor: pointer;
+}
+
+.players:hover {
+  color: #27AAE1;
+}
+
+.title {
+  font-size: clamp(3rem, 0.143rem + 7.619vw, 7rem);
+  font-family: "Magz", sans-serif;
+}
+
+.title__tic {
+  color: #FFD501;
+}
+
+.title__tac {
+  color: #27AAE1;
+}
+
+.title__toe {
+  color: #EE2A7B;
+}
+
+#exit-button-container {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#exit-button {
+  margin-left: 5rem;
+  margin-top: 2.5rem;
+}
+
+#exit-button-img {
+  height: auto;
+  width: clamp(1rem, 0.286rem + 1.905vw, 2rem);
+}
+
+#main__status-display {
+  border: 0.5vmin solid #27AAE1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem;
+  font-size: clamp(1rem, 0.286rem + 1.905vw, 2rem);
+  margin-bottom: 5vmin;
+  font-family: "Fonzie", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  height: 10vh;
+}
+
+#main__section1 {
+  display: flex;
+  height: 70vh;
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#history-container {
+  margin-top: 10vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#game-history__container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 0.5vmin solid #FFD501;
+  height: auto;
+  width: auto;
+  border-radius: 2vmin;
+  background-color: #7C7676;
+  font-family: "Fonzie", sans-serif;
+  color: white;
+  padding: 2vmin;
+  font-size: clamp(1rem, 0.286rem + 1.905vw, 2rem);
+  z-index: 1;
+}
+#game-history__container h3 {
+  text-align: center;
+  height: 5vmin;
+}
+
+#game-history-display {
+  height: auto;
+  width: auto;
+  font-size: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
+  padding: 1rem;
+}
+
+#history__close-button {
+  background-color: #FFD501;
+  font-size: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
+}
+
+#history-button {
+  display: none;
+  background-color: #FFD501;
+  font-size: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
+  margin-top: 30vmin;
+  animation: zoomIn 0.5s forwards;
+}
+
+#main__section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+  width: 40vw;
+}
+
+#board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+  width: 40vw;
+}
+
+#board {
+  height: 45vmin;
+  width: 45vmin;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  height: 14vmin;
+  width: 14vmin;
+  font-family: "LMAO", sans-serif;
+  font-size: clamp(2rem, -0.143rem + 5.714vw, 5rem);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0.5vmin;
+}
+
+#tl-box, #br-box {
+  border: 0.3rem solid #FFD501;
+}
+
+#ml-box, #tm-box, #bm-box, #mr-box {
+  border: 0.3rem solid #27AAE1;
+}
+
+#bl-box, #m-box, #tr-box {
+  border: 0.3rem solid #EE2A7B;
+}
+
+.player-symbol {
+  height: auto;
+  width: 80%;
+}
+
+#main__section3 {
+  height: 70vh;
+  width: 30vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.scores {
+  font-size: clamp(2rem, -0.143rem + 5.714vw, 5rem);
+  font-family: "LMAO", sans-serif;
+}
+
+#score-title {
+  font-family: "Fonzie", sans-serif;
+  color: #FFD501;
+}
+
+#score-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#x-score {
+  color: #27AAE1;
+}
+
+#o-score {
+  color: #EE2A7B;
+}
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+  height: 5vh;
+  width: 100vw;
+}
+
+.button-sections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 10vmin;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#back-button, #next-button {
+  display: none;
+  animation: zoomIn 0.5s forwards;
+}
+
+#reset-button {
+  background-color: #27AAE1;
+  font-size: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
+}
+
+.button-img {
+  height: clamp(2rem, 1.286rem + 1.905vw, 3rem);
+  width: clamp(2rem, 1.286rem + 1.905vw, 3rem);
+}
+
+.button-img:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 1100px) {
+  main {
+    flex-direction: column-reverse;
+  }
+  #main__section1 {
+    height: 10vh;
+    width: 100vw;
+  }
+  #history-container {
+    margin-top: 0vmin;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #history-button {
+    margin-top: 5vh;
+  }
+  #game-history__container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #main__section2 {
+    height: 50vh;
+    width: 100vw;
+  }
+  #main__section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 10vh;
+    width: 100vw;
+    flex-direction: row;
+  }
+  #score-title {
+    display: none;
+  }
+  #score-container {
+    flex-direction: row;
+  }
+  .scores {
+    padding: 1rem;
+  }
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0); /* Start with zero size */
+  }
+  to {
+    transform: scale(1); /* End with full size */
+  }
+}
+@keyframes zoomOut {
+  from {
+    transform: scale(1.5); /* Start with zero size */
+  }
+  to {
+    transform: scale(1); /* End with full size */
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translatey(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}/*# sourceMappingURL=style.css.map */

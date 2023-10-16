@@ -1,0 +1,53 @@
+
+#start{
+    @include center;
+    height: 100vh;
+    width: 100vw;
+}
+#start-title{
+    height:clamp(19rem, 7.571rem + 30.476vw, 35rem);
+    width: clamp(19rem, 7.571rem + 30.476vw, 35rem);
+    min-height: 19rem;
+    @include center;
+    flex-direction: column;
+    background-image: url("images/title-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: zoomIn 1s forwards;
+}
+
+
+#select-player{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size:clamp(2rem, -1.571rem + 9.524vw, 7rem) ;
+    animation: zoomOut 1s forwards;
+}
+
+
+
+#start-game-button{
+    background-color:$tertiary;
+}
+
+#select-player-text{
+    color:$primary;
+}
+
+#players__container{
+    color: $tertiary;
+    padding-top: 2vmin;
+
+}
+.players{
+    font-family: $box-font;
+    color: white;
+    cursor: pointer;
+}
+
+.players:hover{
+    color: $secondary;
+}

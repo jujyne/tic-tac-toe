@@ -1,0 +1,133 @@
+
+#main__section1{
+    display: flex;
+    height:70vh;
+    width:30vw; 
+    @include center; 
+}
+
+#history-container{
+    margin-top: 10vmin;
+    @include center;
+}
+
+#game-history__container{
+    display:none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 0.5vmin solid $primary;
+    height: auto;
+    width: auto;
+    border-radius: 2vmin;
+    background-color: $background;
+    font-family: $normal-font;
+    color:white;
+    padding:2vmin;
+    font-size: $medium-font;
+    z-index: 1;
+    h3{
+        text-align:center;
+        height:5vmin;
+    }
+}
+
+#game-history-display{
+    height:auto;
+    width:auto;
+    font-size: $small-font;
+    padding: 1rem;
+}
+
+#history__close-button{
+    background-color: $primary;
+    font-size: $small-font;
+}
+#history-button{
+    display:none;
+    background-color: $primary;
+    font-size: $small-font;
+    margin-top: 30vmin;
+    animation: zoomIn 0.5s forwards;
+}
+
+
+#main__section2{
+    @include center;
+    height:70vh;
+    width:40vw;
+}
+
+#board-container{
+    @include center;
+    height:60vh;
+    width: 40vw;
+}
+
+#board{
+    height:45vmin;
+    width:45vmin;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    height:14vmin;
+    width: 14vmin;
+    font-family: $box-font;
+    font-size:$large-font ;
+    color: white;
+    @include center;
+    text-align: center;
+    margin:0.5vmin
+    
+}
+
+#tl-box, #br-box{
+    border:0.3rem solid $primary;
+}
+#ml-box, #tm-box, #bm-box, #mr-box{
+    border:0.3rem solid $secondary; 
+}
+
+#bl-box, #m-box, #tr-box{
+    border:0.3rem solid $tertiary;
+}
+
+.player-symbol{
+    height:auto;
+    width: 80%;
+}
+
+
+
+#main__section3{
+    height:70vh;
+    width:30vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.scores{
+    font-size: $large-font;
+    font-family:$box-font;
+}
+
+#score-title{
+    font-family:$normal-font ;
+    color: $primary;
+}
+#score-container{
+    display: flex;
+    flex-direction:column;
+}
+#x-score{
+    color: $secondary;
+}
+#o-score{
+    color: $tertiary;
+}

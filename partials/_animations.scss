@@ -1,0 +1,27 @@
+
+@keyframes zoomIn {
+    from {
+      transform: scale(0); /* Start with zero size */
+    }
+    to {
+      transform: scale(1); /* End with full size */
+    }
+}
+
+@keyframes zoomOut {
+    from {
+      transform: scale(1.5); /* Start with zero size */
+    }
+    to {
+      transform: scale(1); /* End with full size */
+    }
+}
+
+@keyframes slideIn {
+    from {
+      transform: translatey(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }

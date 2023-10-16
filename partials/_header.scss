@@ -1,0 +1,44 @@
+
+.title{
+    font-size: $title;
+    font-family: $main-font;
+}
+
+.title__tic{
+    color: $primary;
+}
+.title__tac{
+    color: $secondary;
+}
+.title__toe{
+    color: $tertiary; 
+}
+
+#exit-button-container{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end; 
+}
+#exit-button{
+    margin-left: 5rem;
+    margin-top: 2.5rem;
+}
+#exit-button-img{
+    height: auto;
+    width:$medium-font;
+}
+
+#main__status-display{
+    border: 0.5vmin solid $secondary;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1rem;
+    font-size: $medium-font;
+    margin-bottom:  5vmin;
+    font-family: $normal-font;
+    color: white;
+    @include center;
+    width: auto;
+    height: 10vh;
+}

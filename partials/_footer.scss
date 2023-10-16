@@ -1,0 +1,32 @@
+
+#button-container{
+    @include center;
+    flex-direction:row;
+    height:5vh;
+    width:100vw;
+}
+.button-sections{
+    @include center;
+    width: 10vmin;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+#back-button,#next-button{
+    display:none;
+    animation: zoomIn 0.5s forwards;
+}
+
+#reset-button{
+    background-color: $secondary;
+    font-size: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
+}
+
+.button-img{
+    height:$button;
+    width:$button;
+}
+
+.button-img:hover{
+    opacity: 0.5;
+}
+

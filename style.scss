@@ -1,0 +1,97 @@
+@use "partials/reset";
+
+@import url('https://fonts.cdnfonts.com/css/magz');
+@import url('https://fonts.cdnfonts.com/css/fonzie');
+@import url('https://fonts.cdnfonts.com/css/lmao');
+
+$main-font: 'Magz', sans-serif;
+$normal-font: 'Fonzie', sans-serif;
+$box-font: 'LMAO', sans-serif;
+
+$title: clamp(3rem, 0.143rem + 7.619vw, 7rem);
+$button: clamp(2rem, 1.286rem + 1.905vw, 3rem);
+$large-font: clamp(2rem, -0.143rem + 5.714vw, 5rem);
+$medium-font: clamp(1rem, 0.286rem + 1.905vw, 2rem);
+$small-font: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
+
+
+
+$background: #7C7676;
+$primary: #FFD501;
+$secondary: #27AAE1;
+$tertiary: #EE2A7B;
+
+
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body{
+    @include center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/background.png");
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 20vh;
+    width: 100vw;
+    
+    
+}
+main{
+    @include center;
+    height: 70vh;
+    width: 100vw;
+    flex-direction:row;
+}
+
+footer{
+    height: 5vh;
+    width: 100vw;
+    @include center;
+    
+}
+button{
+    background-color: transparent;
+    border-radius: 3vmin;
+    padding: 1vmin 2vmin;
+    border: none;
+    color:white;
+    font-family:$normal-font;
+    font-size:1.5rem; 
+    cursor:pointer;
+}
+button:hover{
+    opacity: 0.5;
+}
+
+
+#game{
+    display:none;
+    animation: slideIn 2s forwards;
+}
+
+@import "partials/start";
+@import "partials/header";
+@import "partials/main";
+@import "partials/footer";
+@import "partials/media";
+@import "partials/animations";
+
+
+
+
+
+

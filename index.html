@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
+</head>
+<body>
+    <section id="start">
+        <div id="start-title" class="title">
+            <span class="title__tic">tic</span>
+            <span class="title__tac">tac</span>
+            <span class="title__toe">toe</span>
+        </div>
+        <button id="start-game-button">Start game</button>
+
+        <div id="select-player" class="title">
+            <p id="select-player-text">Who goes first?</p>
+            <div id="players__container">
+                <span id="select-x" class="players">X</span> 
+                <span>or</span>
+                <span id="select-o" class="players">O</span>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="game">
+        <header>
+            <div id="exit-button-container">
+                <button id="exit-button"><img id="exit-button-img" src="images/exit-page .png" alt="exit-button"></button>
+            </div>
+            <div>
+                <p id="main__status-display">Player X's move</p>
+            </div>
+            
+        </header>
+
+        <main>
+            <section id="main__section1" class="main__sections">
+                <div id="history-container">
+                    <div id="game-history__container">
+                        <h3>Move History</h3>
+                        <ul id="game-history-display">
+                        </ul>
+                        <button id="history__close-button">Close</button>
+                    </div>
+                    <button id="history-button" class="buttons">History</button>
+                </div>
+            </section>
+            <section id="main__section2" class="main__sections">
+                <div id="board-container">
+                    <div id="board">
+                        <div id="tl-box" class="box"></div>
+                        <div id="tm-box" class="box"></div>
+                        <div id="tr-box" class="box"></div>
+                        <div id="ml-box" class="box"></div>
+                        <div id="m-box"  class="box"></div>
+                        <div id="mr-box" class="box"></div>
+                        <div id="bl-box" class="box"></div>
+                        <div id="bm-box" class="box"></div>
+                        <div id="br-box" class="box"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="main__section3" class="main__sections">   
+                <span class="scores" id="score-title">Scores: </span>
+                <div id="score-container">
+                    <span class="scores" id="x-score">X: 0 </span>
+                    <span class="scores" id="o-score">O: 0</span>
+                </div>
+                
+            </section>
+            
+        </main>
+        <footer>
+            <div id="button-container">
+                <div class="button-sections">
+                    <button id="back-button" class="buttons"><img class="button-img" src="images/prev.png" alt="undo"></button>
+                </div>
+                <div class="button-sections">
+                    <button id ="reset-button" class="buttons">Reset</button>
+                </div>
+                <div class="button-sections">
+                    <button id="next-button" class="buttons"><img class="button-img" src="images/next.png" alt=""></button>
+                </div>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

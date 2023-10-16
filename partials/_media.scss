@@ -1,0 +1,53 @@
+
+@media (max-width:1100px){
+    main{
+        flex-direction: column-reverse;
+    }
+    #main__section1{
+        height:10vh;
+        width:100vw; 
+    }    
+    #history-container{
+        margin-top: 0vmin;
+        margin-bottom: 2rem;
+        @include center;
+    }
+    
+    #history-button{
+        margin-top: 5vh;
+    }
+    
+    #game-history__container{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    
+    #main__section2{
+        height:50vh;
+        width:100vw;
+    }
+    
+    #main__section3{
+        @include center;
+        height:10vh;
+        width:100vw;
+        flex-direction: row;
+    }
+    
+    #score-title{
+        display:none;
+    }
+    #score-container{
+        flex-direction: row;
+        
+    }
+    .scores{
+        padding: 1rem;
+    }
+    
+    
+}
+    
